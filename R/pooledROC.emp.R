@@ -46,6 +46,7 @@ function(y0, y1, p = seq(0,1,l=101), B = 500, method = c("ncoutcome","coutcome")
 
 	res <- list()
 	res$call <- match.call()
+	res$marker <- list(h = y0, d = y1)
 	res$p <- p
 	res$ROC <- poolROC
 	res$AUC <- AUC

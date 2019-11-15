@@ -14,9 +14,14 @@ function(x, factor, K, bdeg = 3, eps = 1e-5) {
 	#param.part <- model.matrix(mt, mf)[,-1, drop = FALSE] # Here we delete the intercept
 
 	# Smooth part
+	if(length(K) == 1) {
+		K <- rep(K, length(factor.levels))
+	} else if (length(K) != length(factor.levels)) {
+		stop("Error with the number of inner knots for the interaction")
+	}
 	temp <- interaction.smooth.part <- list()
 	for(i in 1:length(factor.levels)) {
-		Baux <- bbase.os(x = x[factor == factor.levels[i]], K = K, bdeg = bdeg, intercept = FALSE)
+		Baux <- bbase.os(x = x[factor == factor.levels[i]], K = K[i], bdeg = bdeg, intercept = FALSE)
 		interaction.smooth.part[[i]] <- Baux
 		attributes(Baux) <- attributes(Baux)["dim"]
 		temp[[i]] <- Baux
