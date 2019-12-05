@@ -11,7 +11,7 @@ function(y, X, alpha = 1, m, S, nu, psi, a, b, nsim, L, scale = TRUE) {
 
 	beta <- matrix(0, nrow = L, ncol = k)
 	aux <- try(solve(t(X)%*%X)%*%t(X)%*%yt, silent = TRUE)
-	if(class(aux) != "try-error") {
+	if(!inherits(aux, "try-error")) {
 		for(l in 1:L) {
 			beta[l,] <- aux   
 		}

@@ -12,8 +12,8 @@ Estimates the covariate-adjusted Receiver Operating Characteristic (AROC) curve 
 \tabular{ll}{
 Package: \tab AROC\cr
 Type: \tab Package\cr
-Version: \tab 1.0-1\cr
-Date: \tab 2019-11-05\cr
+Version: \tab 1.0-2\cr
+Date: \tab 2019-12-05\cr
 License: \tab GPL\cr
 }
 }
