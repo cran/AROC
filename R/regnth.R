@@ -41,7 +41,7 @@ function(y,X,m0,S0,nu0,psi0,a,b,nsim,scale=TRUE) {
 		Vaux <- solve(solve(S0) + V0inv[i-1,,])
 		mu0[i,] <- mvrnorm(1, mu = Vaux%*%(V0inv[i-1,,]%*%t(t(beta[i,]))+solve(S0)%*%m0), Sigma = Vaux)
 		    
-		V0inv[i,,] <- rWishart(1, df = nu0+1, solve(nu0*psi0+as.numeric((beta[i,]-mu0[i,])%*%t(t(beta[i,]-mu0[i,])))))
+		V0inv[i,,] <- rWishart(1, df = nu0+1, solve(nu0*psi0 + (beta[i,]-mu0[i,])%*%(t(beta[i,]-mu0[i,]))))
 	    
 	}
 	return(list(beta1,sigma21))

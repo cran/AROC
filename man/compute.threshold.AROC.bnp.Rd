@@ -76,7 +76,7 @@ names(th_bnp)
 m0 <- AROC.bnp(formula.healthy = l_marker1 ~ f(age, K = 0),
 group = "status", tag.healthy = 0, data = newpsa, scale = TRUE,
 p = seq(0,1,l=101), compute.lpml = TRUE, compute.WAIC = TRUE,
-a = 2, b = 0.5, L = 10, nsim = 500, nburn = 100)
+a = 2, b = 0.5, L = 10, nsim = 50, nburn = 10)
 
 # Compute the threshold values
 FPF = c(0.1, 0.3)
