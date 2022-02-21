@@ -12,15 +12,15 @@ Estimates the covariate-adjusted Receiver Operating Characteristic (AROC) curve 
 \tabular{ll}{
 Package: \tab AROC\cr
 Type: \tab Package\cr
-Version: \tab 1.0-3\cr
-Date: \tab 2021-03-17\cr
+Version: \tab 1.0-4\cr
+Date: \tab 2022-02-18\cr
 License: \tab GPL\cr
 }
 }
 \author{
 Maria Xose Rodriguez-Alvarez and Vanda Inacio.
 
-Maintainer: Maria Xose Rodriguez-Alvarez <mxrodriguez@bcamath.org>
+Maintainer: Maria Xose Rodriguez-Alvarez <mxrodriguez@uvigo.es>
 }
 \references{
 
